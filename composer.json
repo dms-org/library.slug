@@ -1,0 +1,36 @@
+{
+    "name": "dms/library.slug",
+    "description": "The URL Slug helper library for the DMS",
+    "authors": [
+        {
+            "name": "Elliot Levin",
+            "email": "elliotlevin@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://api.package.studio/meta/composer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dms\\Library\\Slug\\": "./src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "dms/core": "^0.1",
+        "dms/common.structure": "^0.1"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dms\\Library\\Slug\\Tests\\": "./tests/Tests/",
+            "Dms\\Core\\Tests\\": "./vendor/dms/core/tests/Tests/"
+        }
+    },
+    "require-dev": {
+        "dms/common.testing": "dev-master"
+    }
+}
