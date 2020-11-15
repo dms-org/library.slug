@@ -16,9 +16,8 @@
     },
     "require": {
         "php": ">=7.0.0",
-        "dms-org/core": "dev-upgrade",
-        "timetoogo/pinq": "dev-upgrade",
-        "dms-org/common.structure": "dev-upgrade"
+        "dms-org/core": "^0.9.0",
+        "dms-org/common.structure": "^0.9.0"
     },
     "autoload-dev": {
         "psr-4": {
@@ -27,6 +26,6 @@
         }
     },
     "require-dev": {
-        "dms-org/common.testing": "dev-upgrade"
+        "dms-org/common.testing": "^0.9.0"
     }
 }
