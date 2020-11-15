@@ -16,7 +16,7 @@ class DashedSlugGeneratorTest extends CmsTestCase
      */
     protected $slugGenerator;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->slugGenerator = new DashedSlugGenerator();
     }
