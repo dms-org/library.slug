@@ -5,6 +5,7 @@ namespace Dms\Library\Slug\Generator;
 use Dms\Core\Model\IObjectSet;
 use Dms\Core\Model\Object\Entity;
 use Dms\Library\Slug\ISlugGenerator;
+use Illuminate\Support\Str;
 
 /**
  * @author Elliot Levin <elliotlevin@hotmail.com>
@@ -16,12 +17,7 @@ class DashedSlugGenerator implements ISlugGenerator
      */
     public function generateSlug(IObjectSet $dataSource, string $slugProperty, string $label, Entity $entity = null) : string
     {
-        $slug = preg_replace('~[^\pL\d]+~u', '-', $label);
-        $slug = iconv('utf-8', 'us-ascii//TRANSLIT', $slug);
-        $slug = preg_replace('~[^-\w]+~', '', $slug);
-        $slug = trim($slug, '-');
-        $slug = preg_replace('~-+~', '-', $slug);
-        $slug = strtolower($slug);
+        $slug = Str::slug($label);
 
         if (empty($slug)) {
             $slug = 'default';
